@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SysAdmin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Creepster&family=Oi&family=Righteous&family=Rubik+Iso&family=Tilt+Prism&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oi&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="admin-header">
+    <div class="admin-logo">
+      <h1>SysAdmin</h1>
+    </div>
+    <nav class="admin-menu">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Usuarios</a></li>
+        <li><a href="#">Configuración</a></li>
+        <li><a href="#">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="menu-lateral">
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Acerca de</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="contenido-principal">
+      <!-- Aquí va el contenido principal de tu página -->
+    <h2>BIENVENIDO AL MENU ADMIN</h2>
+    
+    <div class="containt">
+      <button id="toggle-btn" class="despegable" >Registro Estudiantes</button> <br>
+    </div>
+
+    <div id="div-tabla">
+
+    <h3>DATOS ESTUDIANTES</h3>
+    <form id="form-estudiante" class="form2">
+      <input type="text" id="input-nombre" placeholder="Nombre" required>
+      <input type="text" id="input-apellido" placeholder="Apellido" required>
+      <input type="text" id="input-id" placeholder="ID (Opcional)" pattern="[0-9]*" title="Ingresa un id existente">
+      <input type="number" id="input-edad" placeholder="Edad" required>
+      <input type="number" id="input-semestre" placeholder="Semestre" required>
+      <input type="checkbox" id="input-estudia" checked>
+      <button type="submit">Agregar</button>
+    </form>
+    
+    </form>
+    <!-- Contenido de la página -->
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>Semestre</th>
+            <th>Estudia</th>
+            <th>Acciones</th>
+          <!-- Otros encabezados de columnas -->
+          </tr>
+        </thead>
+        <tbody id="tbody-estudiantes">
+        <!-- Aquí se insertarán las filas dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+    </div>
+      <script src="client.js"></script>
+    </div>
+  </body>
+</html>
